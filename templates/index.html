@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction</title>
+</head>
+<body>
+    <h1>Stock Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="company">Company:</label>
+        <select name="company" id="company">
+            <option value="AAPL">AAPL</option>
+            <option value="AMD">AMD</option>
+            <option value="FB">FB</option>
+            <option value="GOOGL">GOOGL</option>
+            <option value="AMZN">AMZN</option>
+            <option value="NVDA">NVDA</option>
+            <option value="EBAY">EBAY</option>
+        </select>
+        <br>
+        <label for="start_date">Start Date:</label>
+        <input type="date" name="start_date" id="start_date" required>
+        <br>
+        <label for="end_date">End Date:</label>
+        <input type="date" name="end_date" id="end_date" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_plot %}
+    <h2>Prediction Results:</h2>
+    <img src="{{ prediction_plot }}" alt="Prediction Plot">
+    {% endif %}
+</body>
+</html>

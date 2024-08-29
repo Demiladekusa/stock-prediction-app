@@ -1,0 +1,16 @@
+# Ignore the virtual environment directory
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore system files
+.DS_Store
+
+# Ignore environment files (if you have any)
+.env
+
+# Ignore output images or temporary files
+static/predicted_vs_actual.png
